@@ -1,0 +1,2422 @@
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\alexy\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.13\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="tp-sql-2024">TP SQL 2024 </h1>
+<h2 id="première-partie">Première partie </h2>
+<h3 id="11-exercice-1">1.1 Exercice 1 </h3>
+<ol>
+<li>L'instruction SELECT suivante est-elle exécutée avec succès : (oui/non) ?</li>
+</ol>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> last_name<span class="token punctuation">,</span> job_id<span class="token punctuation">,</span> salary <span class="token keyword keyword-AS">AS</span> Sal 
+<span class="token keyword keyword-FROM">FROM</span> employees<span class="token punctuation">;</span>
+</code></pre><blockquote>
+<p>oui</p>
+</blockquote>
+<ol start="2">
+<li>L'instruction SELECT suivante est-elle exécutée avec succès: (oui/non) ?</li>
+</ol>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span> 
+<span class="token keyword keyword-FROM">FROM</span> job_grades<span class="token punctuation">;</span> 
+</code></pre><blockquote>
+<p>oui</p>
+</blockquote>
+<ol start="3">
+<li>L'instruction suivante présente quatre erreurs de codage. Pouvez-vous les identifier ?</li>
+</ol>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> employee_id<span class="token punctuation">,</span> last_name 
+sal x <span class="token number">12</span> ANNUAL SALARY 
+<span class="token keyword keyword-FROM">FROM</span> employees<span class="token punctuation">;</span>
+</code></pre><blockquote>
+<p>1ere erreur : il manque une virgule après last_name<br>
+2eme erreur : il manque le '_' entre ANNUAL et SALARY<br>
+3eme erreur : 'x' n'est pas un opérateur valide, il faut utiliser '*'<br>
+4eme erreur : sal n'est pas une colonne de la table employees<br>
+warning : il manque un 'AS' avant ANNUAL_SALARY</p>
+<p>Correction :</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> employee_id<span class="token punctuation">,</span> last_name<span class="token punctuation">,</span> salary <span class="token operator">*</span> <span class="token number">12</span> <span class="token keyword keyword-AS">AS</span> ANNUAL_SALARY
+<span class="token keyword keyword-FROM">FROM</span> employees<span class="token punctuation">;</span>
+</code></pre></blockquote>
+<h3 id="12-exercice-2">1.2 Exercice 2 </h3>
+<p><img src="image.png" alt="alt text"></p>
+<blockquote>
+<p>Determination de la <strong>structure</strong> de la table departments</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-desc">desc</span> departments<span class="token punctuation">;</span>
+</code></pre></blockquote>
+<table>
+<thead>
+<tr>
+<th>Table</th>
+<th>Column</th>
+<th>Data Type</th>
+<th>Length</th>
+<th>Precision</th>
+<th>Scale</th>
+<th>Primary Key</th>
+<th>Nullable</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DEPARTMENTS</td>
+<td>DEPARTMENT_ID</td>
+<td>NUMBER</td>
+<td>-</td>
+<td>4</td>
+<td>0</td>
+<td>1</td>
+<td>-</td>
+<td>-</td>
+<td>Primary key column of departments table.</td>
+</tr>
+<tr>
+<td></td>
+<td>DEPARTMENT_NAME</td>
+<td>VARCHAR2</td>
+<td>30</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>NOT NULL</td>
+<td>-</td>
+<td>A not null column that shows name of a department. Administration, Marketing, Purchasing, Human Resources, Shipping, IT, Executive, Public Relations, Sales, Finance, and Accounting.</td>
+</tr>
+<tr>
+<td></td>
+<td>MANAGER_ID</td>
+<td>NUMBER</td>
+<td>-</td>
+<td>6</td>
+<td>0</td>
+<td>-</td>
+<td>NULLABLE</td>
+<td>-</td>
+<td>Manager_id of a department. Foreign key to employee_id column of employees table. The manager_id column of the employee table references this column.</td>
+</tr>
+<tr>
+<td></td>
+<td>LOCATION_ID</td>
+<td>NUMBER</td>
+<td>-</td>
+<td>4</td>
+<td>0</td>
+<td>-</td>
+<td>NULLABLE</td>
+<td>-</td>
+<td>Location id where a department is located. Foreign key to location_id column of locations table.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Determination du <strong>contenu</strong> de la table departments</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span> <span class="token keyword keyword-FROM">FROM</span> departments<span class="token punctuation">;</span>
+</code></pre></blockquote>
+<table>
+<thead>
+<tr>
+<th>DEPARTMENT_ID</th>
+<th>DEPARTMENT_NAME</th>
+<th>MANAGER_ID</th>
+<th>LOCATION_ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>Administration</td>
+<td>200</td>
+<td>1700</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Marketing</td>
+<td>201</td>
+<td>1800</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Purchasing</td>
+<td>114</td>
+<td>1700</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Human Resources</td>
+<td>203</td>
+<td>2400</td>
+</tr>
+<tr>
+<td>50</td>
+<td>Shipping</td>
+<td>121</td>
+<td>1500</td>
+</tr>
+<tr>
+<td>60</td>
+<td>IT</td>
+<td>103</td>
+<td>1400</td>
+</tr>
+<tr>
+<td>70</td>
+<td>Public Relations</td>
+<td>204</td>
+<td>2700</td>
+</tr>
+<tr>
+<td>80</td>
+<td>Sales</td>
+<td>145</td>
+<td>2500</td>
+</tr>
+<tr>
+<td>90</td>
+<td>Executive</td>
+<td>100</td>
+<td>1700</td>
+</tr>
+<tr>
+<td>100</td>
+<td>Finance</td>
+<td>108</td>
+<td>1700</td>
+</tr>
+<tr>
+<td>110</td>
+<td>Accounting</td>
+<td>205</td>
+<td>1700</td>
+</tr>
+<tr>
+<td>120</td>
+<td>Treasury</td>
+<td></td>
+<td>1700</td>
+</tr>
+<tr>
+<td>130</td>
+<td>Corporate Tax</td>
+<td></td>
+<td>1700</td>
+</tr>
+<tr>
+<td>140</td>
+<td>Control And Credit</td>
+<td></td>
+<td>1700</td>
+</tr>
+<tr>
+<td>150</td>
+<td>Shareholder Services</td>
+<td></td>
+<td>1700</td>
+</tr>
+<tr>
+<td>160</td>
+<td>Benefits</td>
+<td></td>
+<td>1700</td>
+</tr>
+<tr>
+<td>170</td>
+<td>Manufacturing</td>
+<td></td>
+<td>1700</td>
+</tr>
+<tr>
+<td>180</td>
+<td>Construction</td>
+<td></td>
+<td>1700</td>
+</tr>
+<tr>
+<td>190</td>
+<td>Contracting</td>
+<td></td>
+<td>1700</td>
+</tr>
+<tr>
+<td>200</td>
+<td>Operations</td>
+<td></td>
+<td>1700</td>
+</tr>
+<tr>
+<td>210</td>
+<td>IT Support</td>
+<td></td>
+<td>1700</td>
+</tr>
+<tr>
+<td>220</td>
+<td>NOC</td>
+<td></td>
+<td>1700</td>
+</tr>
+<tr>
+<td>230</td>
+<td>IT Helpdesk</td>
+<td></td>
+<td>1700</td>
+</tr>
+<tr>
+<td>240</td>
+<td>Government Sales</td>
+<td></td>
+<td>1700</td>
+</tr>
+<tr>
+<td>250</td>
+<td>Retail Sales</td>
+<td></td>
+<td>1700</td>
+</tr>
+<tr>
+<td>260</td>
+<td>Recruiting</td>
+<td></td>
+<td>1700</td>
+</tr>
+<tr>
+<td>270</td>
+<td>Payroll</td>
+<td></td>
+<td>1700</td>
+</tr>
+</tbody>
+</table>
+<p><img src="image-1.png" alt="alt text"></p>
+<blockquote>
+<p>Determination de la <strong>structure</strong> de la table employees</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-desc">desc</span> employees<span class="token punctuation">;</span>
+</code></pre></blockquote>
+<table>
+<thead>
+<tr>
+<th>Table</th>
+<th>Column</th>
+<th>Data Type</th>
+<th>Length</th>
+<th>Precision</th>
+<th>Scale</th>
+<th>Primary Key</th>
+<th>Nullable</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EMPLOYEES</td>
+<td>EMPLOYEE_ID</td>
+<td>NUMBER</td>
+<td>-</td>
+<td>6</td>
+<td>0</td>
+<td>1</td>
+<td>-</td>
+<td>-</td>
+<td>Primary key of employees table.</td>
+</tr>
+<tr>
+<td></td>
+<td>FIRST_NAME</td>
+<td>VARCHAR2</td>
+<td>20</td>
+<td>-</td>
+<td>-</td>
+<td>nullable</td>
+<td>NOT NULL</td>
+<td>-</td>
+<td>First name of the employee. A not null column.</td>
+</tr>
+<tr>
+<td></td>
+<td>LAST_NAME</td>
+<td>VARCHAR2</td>
+<td>25</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>NOT NULL</td>
+<td>-</td>
+<td>Last name of the employee. A not null column.</td>
+</tr>
+<tr>
+<td></td>
+<td>EMAIL</td>
+<td>VARCHAR2</td>
+<td>25</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>Email id of the employee</td>
+</tr>
+<tr>
+<td></td>
+<td>PHONE_NUMBER</td>
+<td>VARCHAR2</td>
+<td>20</td>
+<td>-</td>
+<td>-</td>
+<td>nullable</td>
+<td>-</td>
+<td>-</td>
+<td>Phone number of the employee; includes country code and area code</td>
+</tr>
+<tr>
+<td></td>
+<td>HIRE_DATE</td>
+<td>DATE</td>
+<td>7</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>NOT NULL</td>
+<td>-</td>
+<td>Date when the employee started on this job. A not null column.</td>
+</tr>
+<tr>
+<td></td>
+<td>JOB_ID</td>
+<td>VARCHAR2</td>
+<td>10</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>NOT NULL</td>
+<td>-</td>
+<td>Current job of the employee; foreign key to job_id column of the job table. A not null column.</td>
+</tr>
+<tr>
+<td></td>
+<td>SALARY</td>
+<td>NUMBER</td>
+<td>-</td>
+<td>8</td>
+<td>2</td>
+<td>nullable</td>
+<td>-</td>
+<td>-</td>
+<td>Monthly salary of the employee. Must be greater than zero (enforced by constraint emp_salary_min)</td>
+</tr>
+<tr>
+<td></td>
+<td>COMMISSION_PCT</td>
+<td>NUMBER</td>
+<td>-</td>
+<td>2</td>
+<td>2</td>
+<td>nullable</td>
+<td>-</td>
+<td>-</td>
+<td>Commission percentage of the employee; Only employees in sales department eligible for commission percentage</td>
+</tr>
+<tr>
+<td></td>
+<td>MANAGER_ID</td>
+<td>NUMBER</td>
+<td>-</td>
+<td>6</td>
+<td>0</td>
+<td>nullable</td>
+<td>-</td>
+<td>-</td>
+<td>Manager id of the employee; has same domain as manager_id in departments table. Foreign key to employee_id column of employees table. (useful for reflexive joins and CONNECT BY query)</td>
+</tr>
+<tr>
+<td></td>
+<td>DEPARTMENT_ID</td>
+<td>NUMBER</td>
+<td>-</td>
+<td>4</td>
+<td>0</td>
+<td>nullable</td>
+<td>-</td>
+<td>-</td>
+<td>Department id where employee works; foreign key to department_id column of the departments table</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Créer une interrogation affichant le nom, l'ID de poste, la date d'embauche et l'ID<br>
+d'employé de chaque employé, l'ID d'employé apparaissant en premier. Associez<br>
+l'alias STARTDATE à la colonne HIRE_DATE. Sauvegardez en cliquant sur « Save »<br>
+votre instruction SQL sous le nom ex_01_05.sql. Prenez une capture d’écran et<br>
+insérez la dans votre rapport.</li>
+</ol>
+<blockquote>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> EMPLOYEE_ID<span class="token punctuation">,</span> LAST_NAME<span class="token punctuation">,</span> JOB_ID<span class="token punctuation">,</span> HIRE_DATE <span class="token keyword keyword-AS">AS</span> STARTDATE
+<span class="token keyword keyword-FROM">FROM</span> employees<span class="token punctuation">;</span>
+</code></pre></blockquote>
+<table>
+<thead>
+<tr>
+<th>EMPLOYEE_ID</th>
+<th>LAST_NAME</th>
+<th>JOB_ID</th>
+<th>STARTDATE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>198</td>
+<td>OConnell</td>
+<td>SH_CLERK</td>
+<td>06/21/1999</td>
+</tr>
+<tr>
+<td>199</td>
+<td>Grant</td>
+<td>SH_CLERK</td>
+<td>01/13/2000</td>
+</tr>
+<tr>
+<td>200</td>
+<td>Whalen</td>
+<td>AD_ASST</td>
+<td>09/17/1987</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Hartstein</td>
+<td>MK_MAN</td>
+<td>02/17/1996</td>
+</tr>
+<tr>
+<td>202</td>
+<td>Fay</td>
+<td>MK_REP</td>
+<td>08/17/1997</td>
+</tr>
+<tr>
+<td>203</td>
+<td>Mavris</td>
+<td>HR_REP</td>
+<td>06/07/1994</td>
+</tr>
+<tr>
+<td>204</td>
+<td>Baer</td>
+<td>PR_REP</td>
+<td>06/07/1994</td>
+</tr>
+<tr>
+<td>205</td>
+<td>Higgins</td>
+<td>AC_MGR</td>
+<td>06/07/1994</td>
+</tr>
+<tr>
+<td>206</td>
+<td>Gietz</td>
+<td>AC_ACCOUNT</td>
+<td>06/07/1994</td>
+</tr>
+<tr>
+<td>100</td>
+<td>King</td>
+<td>AD_PRES</td>
+<td>06/17/1987</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Kochhar</td>
+<td>AD_VP</td>
+<td>09/21/1989</td>
+</tr>
+<tr>
+<td>102</td>
+<td>De Haan</td>
+<td>AD_VP</td>
+<td>01/13/1993</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>195</td>
+<td>Jones</td>
+<td>SH_CLERK</td>
+<td>03/17/1999</td>
+</tr>
+<tr>
+<td>196</td>
+<td>Walsh</td>
+<td>SH_CLERK</td>
+<td>04/24/1998</td>
+</tr>
+<tr>
+<td>197</td>
+<td>Feeney</td>
+<td>SH_CLERK</td>
+<td>05/23/1998</td>
+</tr>
+</tbody>
+</table>
+<ol start="2">
+<li>Créer une interrogation affichant tous les ID de postes uniques de la table<br>
+EMPLOYEES.</li>
+</ol>
+<blockquote>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token keyword keyword-DISTINCT">DISTINCT</span> JOB_ID
+<span class="token keyword keyword-FROM">FROM</span> employees<span class="token punctuation">;</span>
+</code></pre></blockquote>
+<table>
+<thead>
+<tr>
+<th>JOB_ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AC_ACCOUNT</td>
+</tr>
+<tr>
+<td>AC_MGR</td>
+</tr>
+<tr>
+<td>AD_ASST</td>
+</tr>
+<tr>
+<td>AD_PRES</td>
+</tr>
+<tr>
+<td>AD_VP</td>
+</tr>
+<tr>
+<td>FI_ACCOUNT</td>
+</tr>
+<tr>
+<td>FI_MGR</td>
+</tr>
+<tr>
+<td>HR_REP</td>
+</tr>
+<tr>
+<td>IT_PROG</td>
+</tr>
+<tr>
+<td>MK_MAN</td>
+</tr>
+<tr>
+<td>MK_REP</td>
+</tr>
+<tr>
+<td>PR_REP</td>
+</tr>
+<tr>
+<td>PU_CLERK</td>
+</tr>
+<tr>
+<td>PU_MAN</td>
+</tr>
+<tr>
+<td>SA_MAN</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+</tr>
+<tr>
+<td>ST_MAN</td>
+</tr>
+</tbody>
+</table>
+<h2 id="deuxième-partie">Deuxième partie </h2>
+<h3 id="13-liste-des-employés-et-leurs-départements">1.3 Liste des employés et leurs départements </h3>
+<p>Écrivez une requête SQL pour afficher le FIRST_NAME, LAST_NAME et<br>
+DEPARTMENT_NAME de chaque employé.</p>
+<blockquote>
+<p>Voici notre cheatsheet pour les jointures SQL :<br>
+<img src="image-2.png" alt="alt text"></p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> e<span class="token punctuation">.</span>FIRST_NAME<span class="token punctuation">,</span> e<span class="token punctuation">.</span>LAST_NAME<span class="token punctuation">,</span> d<span class="token punctuation">.</span>DEPARTMENT_NAME
+<span class="token keyword keyword-FROM">FROM</span> employees e
+<span class="token keyword keyword-JOIN">JOIN</span> departments d
+<span class="token keyword keyword-ON">ON</span> e<span class="token punctuation">.</span>DEPARTMENT_ID <span class="token operator">=</span> d<span class="token punctuation">.</span>DEPARTMENT_ID<span class="token punctuation">;</span>
+</code></pre><p>ou</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> e<span class="token punctuation">.</span>FIRST_NAME<span class="token punctuation">,</span> e<span class="token punctuation">.</span>LAST_NAME<span class="token punctuation">,</span> d<span class="token punctuation">.</span>DEPARTMENT_NAME
+<span class="token keyword keyword-FROM">FROM</span> employees e<span class="token punctuation">,</span> departments d
+<span class="token keyword keyword-WHERE">WHERE</span> e<span class="token punctuation">.</span>DEPARTMENT_ID <span class="token operator">=</span> d<span class="token punctuation">.</span>DEPARTMENT_ID<span class="token punctuation">;</span>
+</code></pre></blockquote>
+<table>
+<thead>
+<tr>
+<th>FIRST_NAME</th>
+<th>LAST_NAME</th>
+<th>DEPARTMENT_NAME</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jennifer</td>
+<td>Whalen</td>
+<td>Administration</td>
+</tr>
+<tr>
+<td>Michael</td>
+<td>Hartstein</td>
+<td>Marketing</td>
+</tr>
+<tr>
+<td>Pat</td>
+<td>Fay</td>
+<td>Marketing</td>
+</tr>
+<tr>
+<td>Den</td>
+<td>Raphaely</td>
+<td>Purchasing</td>
+</tr>
+<tr>
+<td>Alexander</td>
+<td>Khoo</td>
+<td>Purchasing</td>
+</tr>
+<tr>
+<td>Shelli</td>
+<td>Baida</td>
+<td>Purchasing</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>John</td>
+<td>Chen</td>
+<td>Finance</td>
+</tr>
+<tr>
+<td>Ismael</td>
+<td>Sciarra</td>
+<td>Finance</td>
+</tr>
+<tr>
+<td>Jose Manuel</td>
+<td>Urman</td>
+<td>Finance</td>
+</tr>
+<tr>
+<td>Luis</td>
+<td>Popp</td>
+<td>Finance</td>
+</tr>
+<tr>
+<td>Shelley</td>
+<td>Higgins</td>
+<td>Accounting</td>
+</tr>
+<tr>
+<td>William</td>
+<td>Gietz</td>
+<td>Accounting</td>
+</tr>
+</tbody>
+</table>
+<h3 id="14-salaire-moyen-par-département">1.4 Salaire moyen par département </h3>
+<p>Écrivez une requête SQL pour calculer le salaire moyen de chaque département.<br>
+Affichez le DEPARTMENT_NAME et le salaire moyen arrondi à deux décimales.</p>
+<blockquote>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> d<span class="token punctuation">.</span>DEPARTMENT_NAME<span class="token punctuation">,</span> <span class="token function">ROUND</span><span class="token punctuation">(</span><span class="token function">AVG</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>SALARY<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token keyword keyword-AS">AS</span> AVG_SALARY
+<span class="token keyword keyword-FROM">FROM</span> employees e
+<span class="token keyword keyword-JOIN">JOIN</span> departments d
+<span class="token keyword keyword-ON">ON</span> e<span class="token punctuation">.</span>DEPARTMENT_ID <span class="token operator">=</span> d<span class="token punctuation">.</span>DEPARTMENT_ID
+<span class="token keyword keyword-GROUP">GROUP</span> <span class="token keyword keyword-BY">BY</span> d<span class="token punctuation">.</span>DEPARTMENT_NAME<span class="token punctuation">;</span>
+</code></pre></blockquote>
+<table>
+<thead>
+<tr>
+<th>DEPARTMENT_NAME</th>
+<th>AVG_SALARY</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sales</td>
+<td>8955.88</td>
+</tr>
+<tr>
+<td>Marketing</td>
+<td>9500</td>
+</tr>
+<tr>
+<td>Administration</td>
+<td>4400</td>
+</tr>
+<tr>
+<td>Purchasing</td>
+<td>4150</td>
+</tr>
+<tr>
+<td>Shipping</td>
+<td>3475.56</td>
+</tr>
+<tr>
+<td>Executive</td>
+<td>19333.33</td>
+</tr>
+<tr>
+<td>IT</td>
+<td>5760</td>
+</tr>
+<tr>
+<td>Finance</td>
+<td>8600</td>
+</tr>
+<tr>
+<td>Public Relations</td>
+<td>10000</td>
+</tr>
+<tr>
+<td>Human Resources</td>
+<td>6500</td>
+</tr>
+<tr>
+<td>Accounting</td>
+<td>10150</td>
+</tr>
+</tbody>
+</table>
+<h3 id="15-employés-sans-manager">1.5 Employés sans manager </h3>
+<p>Écrivez une requête SQL pour afficher les EMPLOYEE_ID, FIRST_NAME et<br>
+LAST_NAME des employés qui n'ont pas de manager (c'est-à-dire dont le<br>
+MANAGER_ID est NULL).</p>
+<blockquote>
+<p>Auto-jointure de la table employees car le manager_id est une clé étrangère de la table employees</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> EMPLOYEE_ID<span class="token punctuation">,</span> FIRST_NAME<span class="token punctuation">,</span> LAST_NAME
+<span class="token keyword keyword-FROM">FROM</span> employees
+<span class="token keyword keyword-WHERE">WHERE</span> MANAGER_ID <span class="token operator">IS</span> <span class="token boolean">NULL</span><span class="token punctuation">;</span>
+</code></pre></blockquote>
+<table>
+<thead>
+<tr>
+<th>EMPLOYEE_ID</th>
+<th>FIRST_NAME</th>
+<th>LAST_NAME</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100</td>
+<td>Steven</td>
+<td>King</td>
+</tr>
+</tbody>
+</table>
+<h3 id="16-top-5-des-salaires-les-plus-élevés">1.6 Top 5 des salaires les plus élevés </h3>
+<p>Écrivez une requête SQL pour afficher les cinq salaires les plus élevés parmi les<br>
+employés, ainsi que les EMPLOYEE_ID, FIRST_NAME, LAST_NAME et SALARY<br>
+correspondants.</p>
+<blockquote>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> EMPLOYEE_ID<span class="token punctuation">,</span> FIRST_NAME<span class="token punctuation">,</span> LAST_NAME<span class="token punctuation">,</span> SALARY
+<span class="token keyword keyword-FROM">FROM</span> employees
+<span class="token keyword keyword-ORDER">ORDER</span> <span class="token keyword keyword-BY">BY</span> SALARY <span class="token keyword keyword-DESC">DESC</span>
+<span class="token keyword keyword-FETCH">FETCH</span> <span class="token keyword keyword-FIRST">FIRST</span> <span class="token number">5</span> <span class="token keyword keyword-ROWS">ROWS</span> ONLY<span class="token punctuation">;</span>
+</code></pre></blockquote>
+<table>
+<thead>
+<tr>
+<th>EMPLOYEE_ID</th>
+<th>FIRST_NAME</th>
+<th>LAST_NAME</th>
+<th>SALARY</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100</td>
+<td>Steven</td>
+<td>King</td>
+<td>24000</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Neena</td>
+<td>Kochhar</td>
+<td>17000</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Lex</td>
+<td>De Haan</td>
+<td>17000</td>
+</tr>
+<tr>
+<td>145</td>
+<td>John</td>
+<td>Russell</td>
+<td>14000</td>
+</tr>
+<tr>
+<td>146</td>
+<td>Karen</td>
+<td>Partners</td>
+<td>13500</td>
+</tr>
+</tbody>
+</table>
+<h3 id="17-employés-ayant-le-même-job">1.7 Employés ayant le même job </h3>
+<p>Écrivez une requête SQL pour afficher les employés ayant le même JOB_ID, en<br>
+regroupant les résultats par JOB_ID. Affichez le JOB_ID, FIRST_NAME et<br>
+LAST_NAME pour chaque employé.</p>
+<blockquote>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> JOB_ID<span class="token punctuation">,</span> FIRST_NAME<span class="token punctuation">,</span> LAST_NAME
+<span class="token keyword keyword-FROM">FROM</span> employees
+<span class="token keyword keyword-GROUP">GROUP</span> <span class="token keyword keyword-BY">BY</span> JOB_ID<span class="token punctuation">,</span> FIRST_NAME<span class="token punctuation">,</span> LAST_NAME<span class="token punctuation">;</span>
+</code></pre></blockquote>
+<table>
+<thead>
+<tr>
+<th>JOB_ID</th>
+<th>FIRST_NAME</th>
+<th>LAST_NAME</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AC_ACCOUNT</td>
+<td>William</td>
+<td>Gietz</td>
+</tr>
+<tr>
+<td>AC_MGR</td>
+<td>Shelley</td>
+<td>Higgins</td>
+</tr>
+<tr>
+<td>AD_ASST</td>
+<td>Jennifer</td>
+<td>Whalen</td>
+</tr>
+<tr>
+<td>AD_PRES</td>
+<td>Steven</td>
+<td>King</td>
+</tr>
+<tr>
+<td>AD_VP</td>
+<td>Neena</td>
+<td>Kochhar</td>
+</tr>
+<tr>
+<td>AD_VP</td>
+<td>Lex</td>
+<td>De Haan</td>
+</tr>
+<tr>
+<td>FI_ACCOUNT</td>
+<td>Daniel</td>
+<td>Faviet</td>
+</tr>
+<tr>
+<td>FI_ACCOUNT</td>
+<td>Luis</td>
+<td>Popp</td>
+</tr>
+<tr>
+<td>FI_ACCOUNT</td>
+<td>John</td>
+<td>Chen</td>
+</tr>
+<tr>
+<td>FI_ACCOUNT</td>
+<td>Ismael</td>
+<td>Sciarra</td>
+</tr>
+<tr>
+<td>FI_ACCOUNT</td>
+<td>Jose Manuel</td>
+<td>Urman</td>
+</tr>
+<tr>
+<td>FI_MGR</td>
+<td>Nancy</td>
+<td>Greenberg</td>
+</tr>
+<tr>
+<td>HR_REP</td>
+<td>Susan</td>
+<td>Mavris</td>
+</tr>
+<tr>
+<td>IT_PROG</td>
+<td>Bruce</td>
+<td>Ernst</td>
+</tr>
+<tr>
+<td>IT_PROG</td>
+<td>Alexander</td>
+<td>Hunold</td>
+</tr>
+<tr>
+<td>IT_PROG</td>
+<td>David</td>
+<td>Austin</td>
+</tr>
+<tr>
+<td>IT_PROG</td>
+<td>Diana</td>
+<td>Lorentz</td>
+</tr>
+<tr>
+<td>IT_PROG</td>
+<td>Valli</td>
+<td>Pataballa</td>
+</tr>
+<tr>
+<td>MK_MAN</td>
+<td>Michael</td>
+<td>Hartstein</td>
+</tr>
+<tr>
+<td>MK_REP</td>
+<td>Pat</td>
+<td>Fay</td>
+</tr>
+<tr>
+<td>PR_REP</td>
+<td>Hermann</td>
+<td>Baer</td>
+</tr>
+<tr>
+<td>PU_CLERK</td>
+<td>Sigal</td>
+<td>Tobias</td>
+</tr>
+<tr>
+<td>PU_CLERK</td>
+<td>Shelli</td>
+<td>Baida</td>
+</tr>
+<tr>
+<td>PU_CLERK</td>
+<td>Alexander</td>
+<td>Khoo</td>
+</tr>
+<tr>
+<td>PU_CLERK</td>
+<td>Guy</td>
+<td>Himuro</td>
+</tr>
+<tr>
+<td>PU_CLERK</td>
+<td>Karen</td>
+<td>Colmenares</td>
+</tr>
+<tr>
+<td>PU_MAN</td>
+<td>Den</td>
+<td>Raphaely</td>
+</tr>
+<tr>
+<td>SA_MAN</td>
+<td>John</td>
+<td>Russell</td>
+</tr>
+<tr>
+<td>SA_MAN</td>
+<td>Karen</td>
+<td>Partners</td>
+</tr>
+<tr>
+<td>SA_MAN</td>
+<td>Gerald</td>
+<td>Cambrault</td>
+</tr>
+<tr>
+<td>SA_MAN</td>
+<td>Alberto</td>
+<td>Errazuriz</td>
+</tr>
+<tr>
+<td>SA_MAN</td>
+<td>Eleni</td>
+<td>Zlotkey</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Peter</td>
+<td>Tucker</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>David</td>
+<td>Bernstein</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Peter</td>
+<td>Hall</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Christopher</td>
+<td>Olsen</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Nanette</td>
+<td>Cambrault</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Oliver</td>
+<td>Tuvault</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Janette</td>
+<td>King</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Patrick</td>
+<td>Sully</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Allan</td>
+<td>McEwen</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Lindsey</td>
+<td>Smith</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Louise</td>
+<td>Doran</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Sarath</td>
+<td>Sewall</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Clara</td>
+<td>Vishney</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Danielle</td>
+<td>Greene</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Mattea</td>
+<td>Marvins</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>David</td>
+<td>Lee</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Sundar</td>
+<td>Ande</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Amit</td>
+<td>Banda</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Lisa</td>
+<td>Ozer</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Harrison</td>
+<td>Bloom</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Tayler</td>
+<td>Fox</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>William</td>
+<td>Smith</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Elizabeth</td>
+<td>Bates</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Sundita</td>
+<td>Kumar</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Ellen</td>
+<td>Abel</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Alyssa</td>
+<td>Hutton</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Jonathon</td>
+<td>Taylor</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Jack</td>
+<td>Livingston</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Kimberely</td>
+<td>Grant</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>Charles</td>
+<td>Johnson</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>Douglas</td>
+<td>Grant</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>Kevin</td>
+<td>Feeney</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>Winston</td>
+<td>Taylor</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>Jean</td>
+<td>Fleaur</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>Martha</td>
+<td>Sullivan</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>Girard</td>
+<td>Geoni</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>Nandita</td>
+<td>Sarchand</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>Alexis</td>
+<td>Bull</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>Julia</td>
+<td>Dellinger</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>Anthony</td>
+<td>Cabrio</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>Kelly</td>
+<td>Chung</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>Jennifer</td>
+<td>Dilly</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>Timothy</td>
+<td>Gates</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>Randall</td>
+<td>Perkins</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>Sarah</td>
+<td>Bell</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>Britney</td>
+<td>Everett</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>Samuel</td>
+<td>McCain</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>Vance</td>
+<td>Jones</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>Alana</td>
+<td>Walsh</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>Donald</td>
+<td>OConnell</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>Irene</td>
+<td>Mikkilineni</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>Julia</td>
+<td>Nayer</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>James</td>
+<td>Landry</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>Peter</td>
+<td>Vargas</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>Randall</td>
+<td>Matos</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>Curtis</td>
+<td>Davies</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>Trenna</td>
+<td>Rajs</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>Steven</td>
+<td>Markle</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>Laura</td>
+<td>Bissot</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>Mozhe</td>
+<td>Atkinson</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>James</td>
+<td>Marlow</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>TJ</td>
+<td>Olson</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>Jason</td>
+<td>Mallin</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>Michael</td>
+<td>Rogers</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>Ki</td>
+<td>Gee</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>Hazel</td>
+<td>Philtanker</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>Renske</td>
+<td>Ladwig</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>Stephen</td>
+<td>Stiles</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>John</td>
+<td>Seo</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>Joshua</td>
+<td>Patel</td>
+</tr>
+<tr>
+<td>ST_MAN</td>
+<td>Payam</td>
+<td>Kaufling</td>
+</tr>
+<tr>
+<td>ST_MAN</td>
+<td>Adam</td>
+<td>Fripp</td>
+</tr>
+<tr>
+<td>ST_MAN</td>
+<td>Matthew</td>
+<td>Weiss</td>
+</tr>
+<tr>
+<td>ST_MAN</td>
+<td>Shanta</td>
+<td>Vollman</td>
+</tr>
+<tr>
+<td>ST_MAN</td>
+<td>Kevin</td>
+<td>Mourgos</td>
+</tr>
+</tbody>
+</table>
+<h3 id="18-liste-des-départements-et-de-leurs-managers">1.8 Liste des départements et de leurs managers </h3>
+<p>Écrivez une requête SQL pour afficher le DEPARTMENT_ID,<br>
+DEPARTMENT_NAME, MANAGER_ID, FIRST_NAME et LAST_NAME de chaque<br>
+manager de département.</p>
+<blockquote>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> d<span class="token punctuation">.</span>DEPARTMENT_ID<span class="token punctuation">,</span> d<span class="token punctuation">.</span>DEPARTMENT_NAME<span class="token punctuation">,</span> d<span class="token punctuation">.</span>MANAGER_ID<span class="token punctuation">,</span> e<span class="token punctuation">.</span>FIRST_NAME<span class="token punctuation">,</span> e<span class="token punctuation">.</span>LAST_NAME
+<span class="token keyword keyword-FROM">FROM</span> departments d
+<span class="token keyword keyword-JOIN">JOIN</span> employees e
+<span class="token keyword keyword-ON">ON</span> d<span class="token punctuation">.</span>MANAGER_ID <span class="token operator">=</span> e<span class="token punctuation">.</span>EMPLOYEE_ID<span class="token punctuation">;</span>
+</code></pre></blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">DEPARTMENT_ID</th>
+<th style="text-align:right">DEPARTMENT_NAME</th>
+<th style="text-align:right">MANAGER_ID</th>
+<th style="text-align:right">FIRST_NAME</th>
+<th style="text-align:right">LAST_NAME</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">10</td>
+<td style="text-align:right">Administration</td>
+<td style="text-align:right">200</td>
+<td style="text-align:right">Jennifer</td>
+<td style="text-align:right">Whalen</td>
+</tr>
+<tr>
+<td style="text-align:right">20</td>
+<td style="text-align:right">Marketing</td>
+<td style="text-align:right">201</td>
+<td style="text-align:right">Michael</td>
+<td style="text-align:right">Hartstein</td>
+</tr>
+<tr>
+<td style="text-align:right">30</td>
+<td style="text-align:right">Purchasing</td>
+<td style="text-align:right">114</td>
+<td style="text-align:right">Den</td>
+<td style="text-align:right">Raphaely</td>
+</tr>
+<tr>
+<td style="text-align:right">40</td>
+<td style="text-align:right">Human Resources</td>
+<td style="text-align:right">203</td>
+<td style="text-align:right">Susan</td>
+<td style="text-align:right">Mavris</td>
+</tr>
+<tr>
+<td style="text-align:right">50</td>
+<td style="text-align:right">Shipping</td>
+<td style="text-align:right">121</td>
+<td style="text-align:right">Adam</td>
+<td style="text-align:right">Fripp</td>
+</tr>
+<tr>
+<td style="text-align:right">60</td>
+<td style="text-align:right">IT</td>
+<td style="text-align:right">103</td>
+<td style="text-align:right">Alexander</td>
+<td style="text-align:right">Hunold</td>
+</tr>
+<tr>
+<td style="text-align:right">70</td>
+<td style="text-align:right">Public Relations</td>
+<td style="text-align:right">204</td>
+<td style="text-align:right">Hermann</td>
+<td style="text-align:right">Baer</td>
+</tr>
+<tr>
+<td style="text-align:right">80</td>
+<td style="text-align:right">Sales</td>
+<td style="text-align:right">145</td>
+<td style="text-align:right">John</td>
+<td style="text-align:right">Russell</td>
+</tr>
+<tr>
+<td style="text-align:right">90</td>
+<td style="text-align:right">Executive</td>
+<td style="text-align:right">100</td>
+<td style="text-align:right">Steven</td>
+<td style="text-align:right">King</td>
+</tr>
+<tr>
+<td style="text-align:right">100</td>
+<td style="text-align:right">Finance</td>
+<td style="text-align:right">108</td>
+<td style="text-align:right">Nancy</td>
+<td style="text-align:right">Greenberg</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td style="text-align:right">Accounting</td>
+<td style="text-align:right">205</td>
+<td style="text-align:right">Shelley</td>
+<td style="text-align:right">Higgins</td>
+</tr>
+</tbody>
+</table>
+<h3 id="19-employés-embauchés-en-2020">1.9 Employés embauchés en 2020 </h3>
+<p>Écrivez une requête SQL pour afficher les EMPLOYEE_ID, FIRST_NAME,<br>
+LAST_NAME et HIRE_DATE des employés embauchés en 2020.</p>
+<blockquote>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> EMPLOYEE_ID<span class="token punctuation">,</span> FIRST_NAME<span class="token punctuation">,</span> LAST_NAME<span class="token punctuation">,</span> HIRE_DATE
+<span class="token keyword keyword-FROM">FROM</span> employees
+<span class="token keyword keyword-WHERE">WHERE</span> EXTRACT<span class="token punctuation">(</span><span class="token keyword keyword-YEAR">YEAR</span> <span class="token keyword keyword-FROM">FROM</span> HIRE_DATE<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">2020</span><span class="token punctuation">;</span>
+</code></pre></blockquote>
+<h3 id="110-augmentation-de-salaire-pour-un-département-spécifique">1.10 Augmentation de salaire pour un département spécifique </h3>
+<p>Écrivez une requête SQL pour mettre à jour le salaire de tous les employés d'un<br>
+département spécifique (par exemple, DEPARTMENT_ID = 10) en augmentant leur<br>
+salaire de 10 %. Affichez le EMPLOYEE_ID, FIRST_NAME, LAST_NAME et le<br>
+nouveau SALARY de chaque employé concerné.</p>
+<h5 id="liste-des-employés-du-département-10-avant-la-mise-à-jour-du-salaire">Liste des employés du département 10 avant la mise à jour du salaire: </h5>
+<table>
+<thead>
+<tr>
+<th>EMPLOYEE_ID</th>
+<th>FIRST_NAME</th>
+<th>LAST_NAME</th>
+<th>SALARY</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>Jennifer</td>
+<td>Whalen</td>
+<td>4400</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Mis à jour du salaire des employés du département 10, augmenté de 10%</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-UPDATE">UPDATE</span> employees
+<span class="token keyword keyword-SET">SET</span> SALARY <span class="token operator">=</span> SALARY <span class="token operator">*</span> <span class="token number">1.1</span>
+<span class="token keyword keyword-WHERE">WHERE</span> DEPARTMENT_ID <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+</code></pre></blockquote>
+<p><code>1 row(s) updated.</code></p>
+<blockquote>
+<p>Affichage des employés du département 10</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> EMPLOYEE_ID<span class="token punctuation">,</span> FIRST_NAME<span class="token punctuation">,</span> LAST_NAME<span class="token punctuation">,</span> SALARY
+<span class="token keyword keyword-FROM">FROM</span> employees
+<span class="token keyword keyword-WHERE">WHERE</span> DEPARTMENT_ID <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+</code></pre></blockquote>
+<table>
+<thead>
+<tr>
+<th>EMPLOYEE_ID</th>
+<th>FIRST_NAME</th>
+<th>LAST_NAME</th>
+<th>SALARY</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>Jennifer</td>
+<td>Whalen</td>
+<td>4840</td>
+</tr>
+</tbody>
+</table>
+<h3 id="111-propriétés-des-fonctions-de-groupe">1.11 Propriétés des fonctions de groupe </h3>
+<p>Indiquez la validité des trois affirmations ci-après. (Vrai/Faux)</p>
+<ol>
+<li>Les fonctions de groupe opèrent sur plusieurs lignes et produisent un résultat par<br>
+groupe.<br>
+Vrai/Faux ?</li>
+</ol>
+<blockquote>
+<p><strong>Vrai</strong></p>
+<p>Justification: Les fonctions de groupe opèrent sur plusieurs lignes et produisent un résultat par groupe car elles regroupent les lignes en groupes et appliquent une fonction à chaque groupe.<br>
+Exemple: <code>SELECT DEPARTMENT_ID, AVG(SALARY) FROM employees GROUP BY DEPARTMENT_ID;</code></p>
+</blockquote>
+<ol start="2">
+<li>Les fonctions de groupe prennent en compte les valeurs NULL dans les calculs.<br>
+Vrai/Faux ?</li>
+</ol>
+<blockquote>
+<p><strong>Faux</strong></p>
+<p>Justification: Les fonctions de groupe ignorent les valeurs NULL dans les calculs car elles ne les prennent pas en compte.<br>
+Exemple: <code>SELECT DEPARTMENT_ID, AVG(SALARY) FROM employees GROUP BY DEPARTMENT_ID;</code></p>
+</blockquote>
+<ol start="3">
+<li>La clause WHERE restreint les lignes avant inclusion dans un calcul de groupe.<br>
+Vrai/Faux ?</li>
+</ol>
+<blockquote>
+<p><strong>Faux</strong></p>
+<p>Justification: La clause WHERE restreint les lignes avant inclusion dans un calcul de groupe car elle filtre les lignes avant l'application des fonctions de groupe.<br>
+Exemple: <code>SELECT DEPARTMENT_ID, AVG(SALARY) FROM employees WHERE SALARY &gt; 5000 GROUP BY DEPARTMENT_ID;</code><br>
+Ici, la clause WHERE filtre les lignes avant le calcul de la moyenne des salaires par département.</p>
+</blockquote>
+<h3 id="112-utilisation-basique-des-fonctions-dagrégation">1.12 Utilisation basique des fonctions d’agrégation </h3>
+<p>Déterminez le salaire le plus élevé, le salaire le plus bas, le salaire cumulé et le<br>
+salaire moyen pour tous les employés. Intitulez respectivement les colonnes<br>
+Maximum, Minimum, Sum et Average. Arrondissez les résultats à l'entier le plus<br>
+proche.</p>
+<blockquote>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token function">MAX</span><span class="token punctuation">(</span>SALARY<span class="token punctuation">)</span> <span class="token keyword keyword-AS">AS</span> Maximum<span class="token punctuation">,</span> <span class="token function">MIN</span><span class="token punctuation">(</span>SALARY<span class="token punctuation">)</span> <span class="token keyword keyword-AS">AS</span> Minimum<span class="token punctuation">,</span> <span class="token function">SUM</span><span class="token punctuation">(</span>SALARY<span class="token punctuation">)</span> <span class="token keyword keyword-AS">AS</span> Sum<span class="token punctuation">,</span> <span class="token function">ROUND</span><span class="token punctuation">(</span><span class="token function">AVG</span><span class="token punctuation">(</span>SALARY<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword keyword-AS">AS</span> Average
+<span class="token keyword keyword-FROM">FROM</span> employees<span class="token punctuation">;</span>
+</code></pre></blockquote>
+<table>
+<thead>
+<tr>
+<th>MAXIMUM</th>
+<th>MINIMUM</th>
+<th>SUM</th>
+<th>AVERAGE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>24000</td>
+<td>2100</td>
+<td>691840</td>
+<td>6466</td>
+</tr>
+</tbody>
+</table>
+<h3 id="113-utilisation-de-la-clause-group-by">1.13 Utilisation de la clause GROUP BY </h3>
+<p>Afficher le salaire minimum, le salaire maximum, le salaire cumulé et le salaire<br>
+moyen pour chaque type de poste (job_id).</p>
+<blockquote>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> JOB_ID<span class="token punctuation">,</span> <span class="token function">MIN</span><span class="token punctuation">(</span>SALARY<span class="token punctuation">)</span> <span class="token keyword keyword-AS">AS</span> Minimum<span class="token punctuation">,</span> <span class="token function">MAX</span><span class="token punctuation">(</span>SALARY<span class="token punctuation">)</span> <span class="token keyword keyword-AS">AS</span> Maximum<span class="token punctuation">,</span> <span class="token function">SUM</span><span class="token punctuation">(</span>SALARY<span class="token punctuation">)</span> <span class="token keyword keyword-AS">AS</span> Sum<span class="token punctuation">,</span> <span class="token function">ROUND</span><span class="token punctuation">(</span><span class="token function">AVG</span><span class="token punctuation">(</span>SALARY<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword keyword-AS">AS</span> Average
+<span class="token keyword keyword-FROM">FROM</span> employees
+<span class="token keyword keyword-GROUP">GROUP</span> <span class="token keyword keyword-BY">BY</span> JOB_ID<span class="token punctuation">;</span>
+</code></pre></blockquote>
+<table>
+<thead>
+<tr>
+<th>JOB_ID</th>
+<th>MINIMUM</th>
+<th>MAXIMUM</th>
+<th>SUM</th>
+<th>AVERAGE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SH_CLERK</td>
+<td>2500</td>
+<td>4200</td>
+<td>64300</td>
+<td>3215</td>
+</tr>
+<tr>
+<td>HR_REP</td>
+<td>6500</td>
+<td>6500</td>
+<td>6500</td>
+<td>6500</td>
+</tr>
+<tr>
+<td>AD_VP</td>
+<td>17000</td>
+<td>17000</td>
+<td>34000</td>
+<td>17000</td>
+</tr>
+<tr>
+<td>FI_ACCOUNT</td>
+<td>6900</td>
+<td>9000</td>
+<td>39600</td>
+<td>7920</td>
+</tr>
+<tr>
+<td>PU_CLERK</td>
+<td>2500</td>
+<td>3100</td>
+<td>13900</td>
+<td>2780</td>
+</tr>
+<tr>
+<td>AC_MGR</td>
+<td>12000</td>
+<td>12000</td>
+<td>12000</td>
+<td>12000</td>
+</tr>
+<tr>
+<td>PU_MAN</td>
+<td>11000</td>
+<td>11000</td>
+<td>11000</td>
+<td>11000</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>2100</td>
+<td>3600</td>
+<td>55700</td>
+<td>2785</td>
+</tr>
+<tr>
+<td>AD_ASST</td>
+<td>4840</td>
+<td>4840</td>
+<td>4840</td>
+<td>4840</td>
+</tr>
+<tr>
+<td>AC_ACCOUNT</td>
+<td>8300</td>
+<td>8300</td>
+<td>8300</td>
+<td>8300</td>
+</tr>
+<tr>
+<td>IT_PROG</td>
+<td>4200</td>
+<td>9000</td>
+<td>28800</td>
+<td>5760</td>
+</tr>
+<tr>
+<td>SA_MAN</td>
+<td>10500</td>
+<td>14000</td>
+<td>61000</td>
+<td>12200</td>
+</tr>
+<tr>
+<td>FI_MGR</td>
+<td>12000</td>
+<td>12000</td>
+<td>12000</td>
+<td>12000</td>
+</tr>
+<tr>
+<td>ST_MAN</td>
+<td>5800</td>
+<td>8200</td>
+<td>36400</td>
+<td>7280</td>
+</tr>
+<tr>
+<td>MK_MAN</td>
+<td>13000</td>
+<td>13000</td>
+<td>13000</td>
+<td>13000</td>
+</tr>
+<tr>
+<td>AD_PRES</td>
+<td>24000</td>
+<td>24000</td>
+<td>24000</td>
+<td>24000</td>
+</tr>
+<tr>
+<td>MK_REP</td>
+<td>6000</td>
+<td>6000</td>
+<td>6000</td>
+<td>6000</td>
+</tr>
+<tr>
+<td>PR_REP</td>
+<td>10000</td>
+<td>10000</td>
+<td>10000</td>
+<td>10000</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>6100</td>
+<td>11500</td>
+<td>250500</td>
+<td>8350</td>
+</tr>
+</tbody>
+</table>
+<h3 id="114-calculs-avec-les-fonctions-de-groupe">1.14 Calculs avec les fonctions de groupe </h3>
+<p>Afficher le numéro de manager et le salaire de l'employé le moins payé sous les<br>
+ordres de ce manager. Exclure toute personne pour laquelle le manager n'est pas<br>
+connu. Exclure les groupes dans lesquels le salaire minimum est de<br>
+6 000 $ ou moins. Triez les résultats par ordre décroissant sur la base du salaire.</p>
+<blockquote>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> MANAGER_ID<span class="token punctuation">,</span> <span class="token function">MIN</span><span class="token punctuation">(</span>SALARY<span class="token punctuation">)</span> <span class="token keyword keyword-AS">AS</span> Minimum
+<span class="token keyword keyword-FROM">FROM</span> employees
+<span class="token keyword keyword-WHERE">WHERE</span> MANAGER_ID <span class="token operator">IS</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span>
+<span class="token keyword keyword-GROUP">GROUP</span> <span class="token keyword keyword-BY">BY</span> MANAGER_ID
+<span class="token keyword keyword-HAVING">HAVING</span> <span class="token function">MIN</span><span class="token punctuation">(</span>SALARY<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">6000</span>
+<span class="token keyword keyword-ORDER">ORDER</span> <span class="token keyword keyword-BY">BY</span> Minimum <span class="token keyword keyword-DESC">DESC</span><span class="token punctuation">;</span>
+</code></pre></blockquote>
+<table>
+<thead>
+<tr>
+<th>MANAGER_ID</th>
+<th>MINIMUM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>102</td>
+<td>9000</td>
+</tr>
+<tr>
+<td>205</td>
+<td>8300</td>
+</tr>
+<tr>
+<td>145</td>
+<td>7000</td>
+</tr>
+<tr>
+<td>146</td>
+<td>7000</td>
+</tr>
+<tr>
+<td>108</td>
+<td>6900</td>
+</tr>
+<tr>
+<td>147</td>
+<td>6200</td>
+</tr>
+<tr>
+<td>149</td>
+<td>6200</td>
+</tr>
+<tr>
+<td>148</td>
+<td>6100</td>
+</tr>
+</tbody>
+</table>
+<h3 id="115-calculs-avec-les-fonctions-de-groupe">1.15 Calculs avec les fonctions de groupe </h3>
+<p>Créez une matrice permettant d'afficher le poste (job_id), le salaire correspondant<br>
+à ce poste sur la base du numéro de département et le salaire total correspondant à<br>
+ce poste, pour les départements 20, 50, 80 et 90, en intitulant chaque colonne de<br>
+façon appropriée.</p>
+<blockquote>
+<p>Approche naïve de la solution</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> JOB_ID<span class="token punctuation">,</span> DEPARTMENT_ID<span class="token punctuation">,</span> SALARY<span class="token punctuation">,</span> <span class="token function">SUM</span><span class="token punctuation">(</span>SALARY<span class="token punctuation">)</span> <span class="token keyword keyword-AS">AS</span> Total_Salary
+<span class="token keyword keyword-FROM">FROM</span> employees
+<span class="token keyword keyword-WHERE">WHERE</span> DEPARTMENT_ID <span class="token operator">IN</span> <span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">,</span> <span class="token number">90</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-GROUP">GROUP</span> <span class="token keyword keyword-BY">BY</span> JOB_ID<span class="token punctuation">,</span> DEPARTMENT_ID<span class="token punctuation">,</span> SALARY<span class="token punctuation">;</span>
+</code></pre><p>Solution factorisée avec la fonction de fenêtrage <code>SUM() OVER()</code></p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> JOB_ID<span class="token punctuation">,</span> DEPARTMENT_ID<span class="token punctuation">,</span> SALARY<span class="token punctuation">,</span> <span class="token function">SUM</span><span class="token punctuation">(</span>SALARY<span class="token punctuation">)</span> <span class="token keyword keyword-OVER">OVER</span> <span class="token punctuation">(</span><span class="token keyword keyword-PARTITION">PARTITION</span> <span class="token keyword keyword-BY">BY</span> JOB_ID<span class="token punctuation">)</span> <span class="token keyword keyword-AS">AS</span> Total_Salary
+<span class="token keyword keyword-FROM">FROM</span> employees
+<span class="token keyword keyword-WHERE">WHERE</span> DEPARTMENT_ID <span class="token operator">IN</span> <span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">,</span> <span class="token number">90</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></blockquote>
+<table>
+<thead>
+<tr>
+<th>JOB_ID</th>
+<th>DEPARTMENT_ID</th>
+<th>SALARY</th>
+<th>TOTAL_SALARY</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AD_PRES</td>
+<td>90</td>
+<td>24000</td>
+<td>24000</td>
+</tr>
+<tr>
+<td>AD_VP</td>
+<td>90</td>
+<td>17000</td>
+<td>34000</td>
+</tr>
+<tr>
+<td>AD_VP</td>
+<td>90</td>
+<td>17000</td>
+<td>34000</td>
+</tr>
+<tr>
+<td>MK_MAN</td>
+<td>20</td>
+<td>13000</td>
+<td>13000</td>
+</tr>
+<tr>
+<td>MK_REP</td>
+<td>20</td>
+<td>6000</td>
+<td>6000</td>
+</tr>
+<tr>
+<td>SA_MAN</td>
+<td>80</td>
+<td>14000</td>
+<td>61000</td>
+</tr>
+<tr>
+<td>SA_MAN</td>
+<td>80</td>
+<td>13500</td>
+<td>61000</td>
+</tr>
+<tr>
+<td>SA_MAN</td>
+<td>80</td>
+<td>10500</td>
+<td>61000</td>
+</tr>
+<tr>
+<td>SA_MAN</td>
+<td>80</td>
+<td>11000</td>
+<td>61000</td>
+</tr>
+<tr>
+<td>SA_MAN</td>
+<td>80</td>
+<td>12000</td>
+<td>61000</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>7200</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>6800</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>6400</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>6200</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>11500</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>10000</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>9600</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>7400</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>7300</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>6100</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>11000</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>8800</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>8600</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>8400</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>6200</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>10000</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>9500</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>9000</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>8000</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>7500</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>7000</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>10000</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>9500</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>9000</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>8000</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>7500</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>7000</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>10500</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SA_REP</td>
+<td>80</td>
+<td>9500</td>
+<td>243500</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>50</td>
+<td>2600</td>
+<td>64300</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>50</td>
+<td>3000</td>
+<td>64300</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>50</td>
+<td>2600</td>
+<td>64300</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>50</td>
+<td>3100</td>
+<td>64300</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>50</td>
+<td>2800</td>
+<td>64300</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>50</td>
+<td>3200</td>
+<td>64300</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>50</td>
+<td>3900</td>
+<td>64300</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>50</td>
+<td>4000</td>
+<td>64300</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>50</td>
+<td>2500</td>
+<td>64300</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>50</td>
+<td>2900</td>
+<td>64300</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>50</td>
+<td>3600</td>
+<td>64300</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>50</td>
+<td>3800</td>
+<td>64300</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>50</td>
+<td>3000</td>
+<td>64300</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>50</td>
+<td>3400</td>
+<td>64300</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>50</td>
+<td>4100</td>
+<td>64300</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>50</td>
+<td>4200</td>
+<td>64300</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>50</td>
+<td>2800</td>
+<td>64300</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>50</td>
+<td>2500</td>
+<td>64300</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>50</td>
+<td>3100</td>
+<td>64300</td>
+</tr>
+<tr>
+<td>SH_CLERK</td>
+<td>50</td>
+<td>3200</td>
+<td>64300</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>50</td>
+<td>3200</td>
+<td>55700</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>50</td>
+<td>2700</td>
+<td>55700</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>50</td>
+<td>3200</td>
+<td>55700</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>50</td>
+<td>2700</td>
+<td>55700</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>50</td>
+<td>2400</td>
+<td>55700</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>50</td>
+<td>2200</td>
+<td>55700</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>50</td>
+<td>2500</td>
+<td>55700</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>50</td>
+<td>3500</td>
+<td>55700</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>50</td>
+<td>3100</td>
+<td>55700</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>50</td>
+<td>2600</td>
+<td>55700</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>50</td>
+<td>2500</td>
+<td>55700</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>50</td>
+<td>3600</td>
+<td>55700</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>50</td>
+<td>2200</td>
+<td>55700</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>50</td>
+<td>2400</td>
+<td>55700</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>50</td>
+<td>2900</td>
+<td>55700</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>50</td>
+<td>3300</td>
+<td>55700</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>50</td>
+<td>2100</td>
+<td>55700</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>50</td>
+<td>2500</td>
+<td>55700</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>50</td>
+<td>2800</td>
+<td>55700</td>
+</tr>
+<tr>
+<td>ST_CLERK</td>
+<td>50</td>
+<td>3300</td>
+<td>55700</td>
+</tr>
+<tr>
+<td>ST_MAN</td>
+<td>50</td>
+<td>6500</td>
+<td>36400</td>
+</tr>
+<tr>
+<td>ST_MAN</td>
+<td>50</td>
+<td>5800</td>
+<td>36400</td>
+</tr>
+<tr>
+<td>ST_MAN</td>
+<td>50</td>
+<td>8200</td>
+<td>36400</td>
+</tr>
+<tr>
+<td>ST_MAN</td>
+<td>50</td>
+<td>7900</td>
+<td>36400</td>
+</tr>
+<tr>
+<td>ST_MAN</td>
+<td>50</td>
+<td>8000</td>
+<td>36400</td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
