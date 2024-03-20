@@ -1,4 +1,5 @@
 # TP SQL 2024
+###### Groupe composé d'Alexy VANOT et de Darel MARTIN
 
 ## Première partie
 
